@@ -1,5 +1,9 @@
-body {
+* {
     box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #b1151c, #b7003a, #b20059, #a2007a, #811099);
 }
 
 .container {
@@ -10,4 +14,65 @@ body {
 .row {
     display: flex;
     flex-wrap: wrap;
+}
+
+section {
+    margin: 50px 0;
+}
+
+section h2 {
+    font-family: latobold;
+    font-size: 36px;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.calculatorForm {
+    width: 245px;
+    margin: 0 auto;
+    border: 1px solid fuchsia;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 20px fuchsia;
+}
+
+.calculatorForm table {
+    border-spacing: 0;
+}
+
+.calculatorForm form input {
+    font-size: 24px;
+    outline: none;
+    margin: 2px;
+    font-family: calculator_lcdsregular;
+    border-radius: 5px;
+    box-shadow: 0 0 30px red;
+    background-color: #280c33;
+    color: white;
+    border: 1px solid fuchsia;
+}
+
+.calculatorForm form input[type=text] {
+    width: 221px;
+    padding: 10px 5px;
+}
+
+.calculatorForm form input[type=button] {
+    width: 50px;
+    height: 45px;
+}
+
+.calculatorForm form input[type=button]:hover {
+    cursor: pointer;
+    background-color: #469f94;
+    box-shadow: 0 5px 10px #F0FFFF;
+}
+
+.calculatorForm form input[name='0'] {
+    width: 108px;
+}
+
+.calculatorForm form input[name='='] {
+    height: 96px;
 }
