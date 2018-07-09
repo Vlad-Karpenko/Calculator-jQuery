@@ -31,7 +31,6 @@ gulp.task("css", function () {
 gulp.task("js", function () {
     return gulp.src("./src/js/**/*.js")
         .pipe(sourceMaps.init())
-        .pipe(uglify())
         .pipe(concat("main.js"))
         .pipe(sourceMaps.write())
         .pipe(gulp.dest("./build/js"))
@@ -41,6 +40,25 @@ gulp.task("js", function () {
 gulp.task('jquery', function () {
     return gulp.src('node_modules/jquery/dist/jquery.js')
         .pipe(gulp.dest('./build/js'));
+
+});
+
+gulp.task("images", function () {
+    return gulp.src("./src/images/**/*")
+        .pipe(cache(imagemin([
+            imagemin.gifsicle({interlaced: true}), //сжатие .gif
+            imagemin.jpegtran({progressive: true}), //сжатие .jpeg
+            imagemin.optipng({optimizationLevel: 5}), //сжатие .png
+            imagemin.svgo({                         // сжатие .svg
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+
+        ])))
+        .pipe(gulp.dest("./build/images/"))
+        .pipe(reload({stream: true}));
 
 });
 
@@ -62,6 +80,7 @@ gulp.task("clear-cache", function () {
 gulp.task("build", shell.task([
     "gulp clean",
     "gulp jquery",
+    "gulp images",
     "gulp html",
     "gulp fonts",
     "gulp css",
