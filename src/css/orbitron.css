@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'orbitronregular';
+    src: url('../fonts/Orbitron/orbitron-regular-webfont.eot');
+    src: url('../fonts/Orbitron/orbitron-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Orbitron/orbitron-regular-webfont.woff2') format('woff2'),
+         url('../fonts/Orbitron/orbitron-regular-webfont.woff') format('woff'),
+         url('../fonts/Orbitron/orbitron-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
