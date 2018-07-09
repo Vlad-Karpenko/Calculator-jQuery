@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
+    <link rel="icon" href="images/favicon.png">
     <script src="js/jquery.js"></script>
     <link href="css/style.css" rel="stylesheet">
     <script src="js/main.js"></script>
@@ -14,10 +15,10 @@
         <div class="calculatorForm">
             <form name="calculator">
                 <table>
-                    <input type="text" disabled>
+                    <input type="text" disabled maxlength="10">
                     <tr>
-                        <td><input type="button" value="("></td>
-                        <td><input type="button" value=")"></td>
+                        <td><input class="displayValue" type="button" value="("></td>
+                        <td><input class="displayValue" type="button" value=")"></td>
                         <td><input type="button" value="C"></td>
                         <td><input type="button" value="&divide;"></td>
                     </tr>
@@ -25,29 +26,29 @@
                         <td><input type="button" value="%"></td>
                         <td><input type="button" value="&radic;"></td>
                         <td><input type="button" value="&#8656;"></td>
-                        <td><input type="button" value="&times;"></td>
+                        <td><input class="displayValue" type="button" value="&times;"></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="7"></td>
-                        <td><input type="button" value="8"></td>
-                        <td><input type="button" value="9"></td>
-                        <td><input type="button" value="-"></td>
+                        <td><input class="displayValue" type="button" value="7"></td>
+                        <td><input class="displayValue" type="button" value="8"></td>
+                        <td><input class="displayValue" type="button" value="9"></td>
+                        <td><input class="displayValue" type="button" value="-"></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="4"></td>
-                        <td><input type="button" value="5"></td>
-                        <td><input type="button" value="6"></td>
-                        <td><input type="button" value="+"></td>
+                        <td><input class="displayValue" type="button" value="4"></td>
+                        <td><input class="displayValue" type="button" value="5"></td>
+                        <td><input class="displayValue" type="button" value="6"></td>
+                        <td><input class="displayValue" type="button" value="+"></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="1"></td>
-                        <td><input type="button" value="2"></td>
-                        <td><input type="button" value="3"></td>
-                        <td rowspan="2"><input name="=" type="button" value="="></td>
+                        <td><input class="displayValue" type="button" value="1"></td>
+                        <td><input class="displayValue" type="button" value="2"></td>
+                        <td><input class="displayValue" type="button" value="3"></td>
+                        <td rowspan="2"><input name="equality" type="button" value="="></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="."></td>
-                        <td colspan="2"><input name="0" type="button" value="0"></td>
+                        <td><input class="displayValue" type="button" value="."></td>
+                        <td colspan="2"><input class="displayValue" name="0" type="button" value="0"></td>
                     </tr>
                 </table>
             </form>
