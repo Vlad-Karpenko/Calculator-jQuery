@@ -5,10 +5,33 @@
 body {
     background: linear-gradient(to right, #b1151c, #b7003a, #b20059, #a2007a, #811099);
 }
+.container{
+    margin: auto;
 
-.container {
-    margin: 0 auto;
-    width: 1170px;
+}
+
+@media screen and (min-width: 576px ) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px ) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
 }
 
 .row {
