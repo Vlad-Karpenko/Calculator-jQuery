@@ -45,7 +45,6 @@ section h2 {
     font-size: 24px;
     outline: none;
     margin: 2px;
-    font-family: calculator_lcdsregular;
     border-radius: 5px;
     box-shadow: 0 0 30px red;
     background-color: #280c33;
@@ -73,6 +72,6 @@ section h2 {
     width: 108px;
 }
 
-.calculatorForm form input[name='='] {
+.calculatorForm form input[name='equality'] {
     height: 96px;
 }
