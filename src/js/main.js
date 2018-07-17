@@ -3,9 +3,7 @@ $(function () {
     /*display buttons click*/
     $('.displayValue').each(function (index, element) {
         $(element).on('click', function () {
-            if ($(':text')[0].value.length > 11) {
-                $(':text')[0].value = $(':text')[0].value.substr(0, 11);
-            }
+            checkLength();
             $(':text')[0].value += this.value;
         })
     });
@@ -15,9 +13,8 @@ $(function () {
         if ($(':text')[0].value) {
             try {
                 $(':text')[0].value = eval($(':text')[0].value);
-                if ($(':text')[0].value.length > 11) {
-                    $(':text')[0].value = $(':text')[0].value.substr(0, 11);
-                }
+                checkLength();
+
             } catch (e) {
                 $(':text').val('')
             }
@@ -40,9 +37,7 @@ $(function () {
         if (isNaN($(':text')[0].value) == true) {
             $(':text').val("");
         }
-        if ($(':text')[0].value.length > 11) {
-            $(':text')[0].value = $(':text')[0].value.substr(0, 11);
-        }
+        checkLength();
     });
 
     /*find square root*/
@@ -51,8 +46,12 @@ $(function () {
         if (isNaN($(':text')[0].value) == true) {
             $(':text').val("");
         }
+        checkLength();
+    });
+
+    function checkLength() {
         if ($(':text')[0].value.length > 11) {
             $(':text')[0].value = $(':text')[0].value.substr(0, 11);
         }
-    })
+    }
 });
